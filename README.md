@@ -3,7 +3,7 @@ My iPython Notebooks
 
 <b>Bayesian Beta-Binomial Example</b>
 
-This notebook provides a very simple example of Bayesian parameter estimation using the Beta-Binomial model. Both analytical and simulation-based results are presented.  Three different approaches are used to obtain a parameter estimate this model:
+This notebook provides a very simple example of Bayesian parameter estimation using the Beta-Binomial model. Both analytical and simulation-based results are presented.  Three different approaches are used to obtain a parameter estimate for this model:
 
 * Exact Analytical Solution
 * Simple Non-MCMC Solution
