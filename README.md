@@ -23,5 +23,9 @@ The authors of the paper performed several types of statistical analyses to arri
 <b>Extreme Value Theory (EVT)</b>
 <p>Describes EVT calculations using an example from Stuart Cole's book, "An Introduction to Statistical Modeling of Extreme Values".  The calculations are done using both Python and R.  It is noted that there does not appear to be a standard representation of the GEV distribution. Representations differ on how the shape parameter, ξ, should be expressed. Specifically, the shape parameter in the 'ismev' package in R is the negative of the shape parameter in the Python 'scipy.stats.genextreme' module.</p>
 
-<b>Quantile Example using R-8 Method</b>
-<p>Someone asked me once how to compute quantiles. This notebook represents a partial answer to that question.  It provides examples of quantiles for a specific random sample using two versions of the R-8 method: (1) the 'mquantile' function found in the Python 'scipy.stats.mstats' module, and (2) a simple Python implementation based on Wikipedia's description of the R-8 method.</p>
+<b>Bayesian Beta-Binomial Example</b>
+<p>This notebook provides a very simple example of Bayesian parameter estimation using the Beta-Binomial model. Both analytical and simulation-based results are presented.  Three different approaches are used to obtain a parameter estimate this model:
+
+* Exact Analytical Solution
+* Simple Non-MCMC Solution
+* MCMC Solution</p>
