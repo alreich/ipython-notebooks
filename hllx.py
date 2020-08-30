@@ -10,6 +10,7 @@ To find the modifications, look for inline comments that begin with '# !!! '
 
 import numpy as np
 from sklearn import utils
+from functools import reduce
 
 class HyperLogLog(object):
     """ Basic Hyperloglog """
@@ -21,7 +22,8 @@ class HyperLogLog(object):
         self.b = b
         self.m = 1 << b
         self.M = np.zeros(self.m, dtype=np.uint8)
-        self.bitcount_arr = [ 1L << i for i in range(self.precision - b + 1) ]
+        #self.bitcount_arr = [ 1L << i for i in range(self.precision - b + 1) ]
+        self.bitcount_arr = [ 1 << i for i in range(self.precision - b + 1) ]
         #self.hashes = get_raw_hashfunctions()
         self.hashes = utils.murmurhash3_32  # !!! Modified line above
         self.seed = seed  # !!! Added attribute
@@ -80,7 +82,9 @@ class HyperLogLog(object):
         if E <= 2.5 * self.m:             # Small range correction
             V = self.m - np.count_nonzero(self.M)
             return int(self.m * np.log(self.m / float(V))) if V > 0 else int(E)
-        elif E <= float(1L << self.precision) / 30.0:  #intermidiate range correction -> No correction
+        #elif E <= float(1L << self.precision) / 30.0:  #intermidiate range correction -> No correction
+        elif E <= float(1 << self.precision) / 30.0:  #intermidiate range correction -> No correction
             return int(E)
         else:
-            return int(-(1L << self.precision) * np.log(1.0 - E / (1L << self.precision)))
+            #return int(-(1L << self.precision) * np.log(1.0 - E / (1L << self.precision)))
+            return int(-(1 << self.precision) * np.log(1.0 - E / (1 << self.precision)))
