@@ -1,6 +1,10 @@
 # ipython-notebooks
 My iPython Notebooks
 
+<b>Sqrt(-1) Explained</b>
+
+(NEW) This notebook is my attempt to provide a succinct explanation of the square root of -1.
+
 <b>Bayesian Beta-Binomial Example</b>
 
 This notebook provides a very simple example of Bayesian parameter estimation using the Beta-Binomial model. Both analytical and simulation-based results are presented.  Three different approaches are used to obtain a parameter estimate for this model:
