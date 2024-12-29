@@ -3,7 +3,7 @@ My iPython Notebooks
 
 <b>Sqrt(-1) Explained</b>
 
-(NEW) This notebook is my attempt to provide a succinct explanation of the square root of -1.
+This is a very, very brief (minimal) explanation of the "square root of -1", without mathematical jargon, so that it can be read and understood by a broad audience, and so that they can see that there is nothing "imaginary" going on here.
 
 <b>Bayesian Beta-Binomial Example</b>
 
